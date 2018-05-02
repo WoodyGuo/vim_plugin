@@ -31,6 +31,8 @@ let g:colors_name="woody"
 " highlight Normal guifg=#dcdccc guibg=grey20 ctermfg=253 ctermbg=236
 highlight Normal guifg=#dadaca guibg=grey20 ctermfg=253 ctermbg=236
 
+highlight SignColumn ctermbg=236 guibg=grey20 guifg=#dadaca ctermfg=253
+
 " suggested by tigmoid, 2008 Jul 18
 " hi Pmenu guifg=#c0c0c0 guibg=#404080
 " hi PmenuSel guifg=#c0c0c0 guibg=#2050d0
