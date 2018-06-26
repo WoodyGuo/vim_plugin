@@ -2,10 +2,10 @@
 "
 " Vim color file
 " Maintainer:	Hans Fugal <hans@fugal.net>
-" Last Change:	$Date: 2004/06/13 19:30:30 $
-" Last Change:	$Date: 2004/06/13 19:30:30 $
+" Last Change:	$Date: 2003/07/24 00:57:11 $
+" Last Change:	$Date: 2003/07/24 00:57:11 $
 " URL:		http://hans.fugal.net/vim/colors/desert.vim
-" Version:	$Id: desert.vim,v 1.1 2004/06/13 19:30:30 vimboss Exp $
+" Version:	$Id: desert.vim,v 1.7 2003/07/24 00:57:11 fugalh Exp $
 
 " cool help screens
 " :he group-name
@@ -21,30 +21,23 @@ if version > 580
 	syntax reset
     endif
 endif
+
+" My modifications BEGIN
 let g:colors_name="woody"
-
-" hi Normal	guifg=White guibg=grey20
-"
-" From freya
-" hi Normal ctermbg=0 ctermfg=7 cterm=none guibg=#2a2a2a guifg=#dcdccc gui=none
-
-" highlight Normal guifg=#dcdccc guibg=grey20 ctermfg=253 ctermbg=236
-highlight Normal guifg=#dadaca guibg=grey20 ctermfg=253 ctermbg=236
-
-highlight SignColumn ctermbg=236 guibg=grey20 guifg=#dadaca ctermfg=253
+hi SignColumn ctermbg=236 guibg=grey20 guifg=#dadaca ctermfg=253
 
 " suggested by tigmoid, 2008 Jul 18
-" hi Pmenu guifg=#c0c0c0 guibg=#404080
-" hi PmenuSel guifg=#c0c0c0 guibg=#2050d0
-" hi PmenuSbar guifg=blue guibg=darkgray
-" hi PmenuThumb guifg=#c0c0c0
-highlight Pmenu guifg=olivedrab guibg=grey20 ctermfg=64 ctermbg=236
-highlight PmenuSel guifg=#c0c0c0 guibg=grey20 ctermfg=250 ctermbg=236
-" hi PmenuSbar guifg=olivedrab guibg=darkgray
-" hi PmenuThumb guifg=#c0c0c0
+hi Pmenu guifg=olivedrab guibg=grey20 ctermfg=64 ctermbg=236
+hi PmenuSel guifg=#c0c0c0 guibg=grey20 ctermfg=250 ctermbg=236
+
+hi Normal guifg=#dadaca guibg=grey20
+hi Search guifg=wheat guibg=peru
+" My modifications END
+
+" hi Normal	guifg=White guibg=grey20
 
 " highlight groups
-highlight Cursor guifg=slategrey guibg=khaki ctermfg=67 ctermbg=186
+hi Cursor	guibg=indianred guifg=khaki
 "hi CursorIM
 "hi Directory
 "hi DiffAdd
@@ -52,40 +45,80 @@ highlight Cursor guifg=slategrey guibg=khaki ctermfg=67 ctermbg=186
 "hi DiffDelete
 "hi DiffText
 "hi ErrorMsg
-highlight VertSplit guifg=grey50 guibg=#c2bfa5 gui=NONE ctermfg=244 ctermbg=144 cterm=NONE
-highlight Folded guifg=gold guibg=grey30 ctermfg=220 ctermbg=239
-highlight FoldColumn guifg=tan guibg=grey30 ctermfg=180 ctermbg=239
-highlight IncSearch guifg=slategrey guibg=khaki ctermfg=67 ctermbg=186
+hi VertSplit	guibg=#c2bfa5 guifg=grey50 gui=none
+hi Folded	guibg=grey30 guifg=gold
+hi FoldColumn	guibg=grey30 guifg=tan
+hi IncSearch	guifg=slategrey guibg=khaki
 "hi LineNr
-highlight ModeMsg guifg=goldenrod ctermfg=178
-highlight MoreMsg guifg=seagreen ctermfg=29
-highlight NonText guifg=lightblue guibg=grey30 ctermfg=152 ctermbg=239
-highlight Question guifg=springgreen ctermfg=48
-highlight Search guifg=wheat guibg=peru ctermfg=223 ctermbg=172
-highlight SpecialKey guifg=yellowgreen ctermfg=112
-highlight StatusLine guifg=black guibg=#c2bfa5 gui=NONE ctermfg=16 ctermbg=144 cterm=NONE
-highlight StatusLineNC guifg=grey50 guibg=#c2bfa5 gui=NONE ctermfg=244 ctermbg=144 cterm=NONE
-highlight Title guifg=indianred ctermfg=167
-highlight Visual guifg=khaki guibg=olivedrab gui=NONE ctermfg=186 ctermbg=64 cterm=NONE
+hi ModeMsg	guifg=goldenrod
+hi MoreMsg	guifg=SeaGreen
+hi NonText	guifg=LightBlue guibg=grey30
+hi Question	guifg=springgreen
+" hi Search	guibg=grey30 guifg=#dfffdf
+hi SpecialKey	guifg=yellowgreen
+hi StatusLine	guibg=#c2bfa5 guifg=black gui=none
+hi StatusLineNC	guibg=#c2bfa5 guifg=grey50 gui=none
+hi Title	guifg=indianred
+hi Visual	gui=none guifg=khaki guibg=olivedrab
 "hi VisualNOS
-highlight WarningMsg guifg=salmon ctermfg=210
+hi WarningMsg	guifg=salmon
 "hi WildMenu
 "hi Menu
 "hi Scrollbar
 "hi Tooltip
+hi MatchParen guibg=grey30 guifg=#dfffdf
 
 " syntax highlighting groups
-highlight Comment guifg=skyblue ctermfg=117
-highlight Constant guifg=#ffa0a0 ctermfg=217
-highlight Identifier guifg=palegreen ctermfg=120
-highlight Statement guifg=khaki ctermfg=186
-highlight PreProc guifg=indianred ctermfg=167
-highlight Type guifg=darkkhaki ctermfg=143
-highlight Special guifg=navajowhite ctermfg=223
+hi Comment	guifg=SkyBlue
+hi Constant	guifg=#ffa0a0
+hi Identifier	guifg=palegreen
+hi Statement	guifg=khaki
+hi PreProc	guifg=indianred
+hi Type		guifg=darkkhaki
+hi Special	guifg=navajowhite
 "hi Underlined
-highlight Ignore guifg=grey40 ctermfg=241
+hi Ignore	guifg=grey40
 "hi Error
-highlight Todo guifg=orangered guibg=yellow2 ctermfg=202 ctermbg=226
+hi Todo		guifg=orangered guibg=yellow2
+
+" color terminal definitions
+hi SpecialKey	ctermfg=darkgreen
+hi NonText	cterm=bold ctermfg=darkblue
+hi Directory	ctermfg=darkcyan
+hi ErrorMsg	cterm=bold ctermfg=7 ctermbg=1
+hi IncSearch	cterm=NONE ctermfg=yellow ctermbg=green
+" hi Search	cterm=NONE ctermfg=grey ctermbg=blue
+hi Search  cterm=NONE ctermfg=223 ctermbg=172
+hi MoreMsg	ctermfg=darkgreen
+hi ModeMsg	cterm=NONE ctermfg=brown
+hi LineNr	ctermfg=3
+hi Question	ctermfg=green
+hi StatusLine	cterm=bold,reverse
+hi StatusLineNC cterm=reverse
+hi VertSplit	cterm=reverse
+hi Title	ctermfg=5
+hi Visual	cterm=reverse
+hi VisualNOS	cterm=bold,underline
+hi WarningMsg	ctermfg=1
+hi WildMenu	ctermfg=0 ctermbg=3
+hi Folded	ctermfg=darkgrey ctermbg=NONE
+hi FoldColumn	ctermfg=darkgrey ctermbg=NONE
+hi DiffAdd	ctermbg=4
+hi DiffChange	ctermbg=5
+hi DiffDelete	cterm=bold ctermfg=4 ctermbg=6
+hi DiffText	cterm=bold ctermbg=1
+hi Comment	ctermfg=darkcyan
+hi Constant	ctermfg=brown
+hi Special	ctermfg=5
+hi Identifier	ctermfg=6
+hi Statement	ctermfg=3
+hi PreProc	ctermfg=5
+hi Todo		ctermfg=red ctermbg=NONE
+hi Type		ctermfg=2
+hi Underlined	cterm=underline ctermfg=5
+hi Ignore	cterm=bold ctermfg=7
+hi Ignore	ctermfg=darkgrey
+hi Error	cterm=bold ctermfg=7 ctermbg=1
 
 
 "vim: sw=4
