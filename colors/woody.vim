@@ -91,7 +91,7 @@ hi IncSearch	cterm=NONE ctermfg=yellow ctermbg=green
 hi Search  cterm=NONE ctermfg=223 ctermbg=172
 hi MoreMsg	ctermfg=darkgreen
 hi ModeMsg	cterm=NONE ctermfg=brown
-hi LineNr	ctermfg=3
+" hi LineNr	ctermfg=3
 hi Question	ctermfg=green
 hi StatusLine	cterm=bold,reverse
 hi StatusLineNC cterm=reverse
@@ -120,5 +120,43 @@ hi Ignore	cterm=bold ctermfg=7
 hi Ignore	ctermfg=darkgrey
 hi Error	cterm=bold ctermfg=7 ctermbg=1
 
+" My custimzations and additions
+hi LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
+hi def VimwikiHeader1 guibg=bg guifg=#e08090 gui=bold ctermfg=Red       term=bold cterm=bold
+hi def VimwikiHeader2 guibg=bg guifg=#80e090 gui=bold ctermfg=Green     term=bold cterm=bold
+hi def VimwikiHeader3 guibg=bg guifg=#6090e0 gui=bold ctermfg=Blue      term=bold cterm=bold
+hi def VimwikiHeader4 guibg=bg guifg=#c0c0f0 gui=bold ctermfg=White     term=bold cterm=bold
+hi def VimwikiHeader5 guibg=bg guifg=#69f0ae gui=bold ctermfg=White     term=bold cterm=bold
+hi def VimwikiHeader6 guibg=bg guifg=#f0f0f0 gui=bold ctermfg=White     term=bold cterm=bold
+
+" HTML headers.
+hi def link htmlH1 VimwikiHeader1
+hi def link htmlH2 VimwikiHeader2
+hi def link htmlH3 VimwikiHeader3
+hi def link htmlH4 VimwikiHeader4
+hi def link htmlH5 VimwikiHeader5
+hi def link htmlH6 VimwikiHeader6
+
+" Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=yellow guibg=yellow
+autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+
+hi User1 guifg=#f4f597 guibg=#4e586d
+hi User2 guifg=#7dcc7d guibg=#4e586d
+hi User3 guifg=#f4f597 guibg=#4e586d
+hi User4 guifg=#5b7fbb guibg=#4e586d
+hi User5 guifg=#7dcc7d guibg=#4e586d
+hi User7 guifg=#aefe7B guibg=#4e586d gui=bold
+hi User8 guifg=#7dcc7d guibg=#4e586d
+hi User9 guifg=#7dcc7d guibg=#4e586d
+hi User0 guifg=#7dcc7d guibg=#4e586d
+
+hi! clear SpellBad
+hi! clear SpellCap
+hi! clear SpellRare
+hi! SpellBad gui=undercurl guisp=red
+hi! SpellCap gui=undercurl guisp=blue
+hi! SpellRare gui=undercurl guisp=magenta
 
 "vim: sw=4
