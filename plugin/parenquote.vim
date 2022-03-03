@@ -151,7 +151,7 @@ function! s:Init()
     ParenquoteMap! ' ' '
     ParenquoteMap! " " "
     ParenquoteMap! ` ` `
-    ParenquoteMap! = = =
+    " ParenquoteMap! = = =
     ParenquoteMap! * * *
     ParenquoteMap! _ _ _
     ParenquoteMap! ~ ~ ~
