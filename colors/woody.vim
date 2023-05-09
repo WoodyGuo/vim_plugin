@@ -159,4 +159,7 @@ hi! SpellBad gui=undercurl guisp=red
 hi! SpellCap gui=undercurl guisp=blue
 hi! SpellRare gui=undercurl guisp=magenta
 
+autocmd Syntax * syn match JiraCaseId /[a-zA-Z]\{3,}[1-5]\?-[0-9]\{4,}/
+hi JiraCaseId guifg=#7dcc7d
+
 "vim: sw=4
