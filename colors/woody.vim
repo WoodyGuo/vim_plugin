@@ -1,5 +1,9 @@
 " Modified by Woody
 "
+" Show syntax group the word under cursor is using:
+"
+" echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"
+" 
 " Vim color file
 " Maintainer:	Hans Fugal <hans@fugal.net>
 " Last Change:	$Date: 2003/07/24 00:57:11 $
@@ -139,8 +143,8 @@ hi def link htmlH5 VimwikiHeader5
 hi def link htmlH6 VimwikiHeader6
 
 " Highlight trailing whitespace
-highlight ExtraWhitespace ctermbg=yellow guibg=yellow
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+highlight ExtraWhitespace ctermbg=yellow guibg=yellow
 
 hi User1 guifg=#f4f597 guibg=#4e586d
 hi User2 guifg=#7dcc7d guibg=#4e586d
@@ -158,8 +162,5 @@ hi! clear SpellRare
 hi! SpellBad gui=undercurl guisp=red
 hi! SpellCap gui=undercurl guisp=blue
 hi! SpellRare gui=undercurl guisp=magenta
-
-autocmd Syntax * syn match JiraCaseId /[a-zA-Z]\{3,}[1-5]\?-[0-9]\{4,}/
-hi JiraCaseId guifg=#7dcc7d
 
 "vim: sw=4

@@ -157,6 +157,8 @@ function! s:Init()
     ParenquoteMap! ~ ~ ~
     ParenquoteMap! ^ ^ ^
     ParenquoteMap! - - -
+    ParenquoteMap! ~~ ~~ ~~
+    ParenquoteMap! ** ** ** 
   endif
 endfunction
 
